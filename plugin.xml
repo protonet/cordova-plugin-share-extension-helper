@@ -8,7 +8,7 @@
   <keywords>cordova,share extension</keywords>
   <repo>https://github.com/protonet/cordova-plugin-share-extension-helper</repo>
 
-  <js-module src="www/app_groups_user_defaults.js" name="ShareExtensionHelper">
+  <js-module src="www/share_extension_helper.js" name="ShareExtensionHelper">
     <clobbers target="ShareExtensionHelper" />
   </js-module>
 
