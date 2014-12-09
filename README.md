@@ -13,6 +13,8 @@ Use the Cordova CLI and type in the following command:
 
 This application makes it possible to load variables given from the share extension input. It's important to configure the CDVViewController the right way.
 
+At the moment it's only possible to share one image. But please feel free to update that code for a more complex usecase.s
+
 ### ShareViewController.h
 
     @interface ShareViewController : CDVViewController
@@ -40,6 +42,6 @@ This application makes it possible to load variables given from the share extens
 
 The Plugin is only for iOS.
 
-### Save in UserDefaults
+### Load image from ShareViewController
 
-    
+    window.ShareExtensionHelper.loadShareImage(success, fail);

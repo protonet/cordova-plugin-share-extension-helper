@@ -2,8 +2,7 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
         id="info.protonet.appgroupsuserdefaults" version="0.0.1">
   <name>Share Extension Helper</name>
-  <description>This plugin is used to save and load data to the app groups. It
-  is used to share data between App and Share Extension.</description>
+  <description></description>
   <author>Joschka Schulz</author>
   <license>Apache 2.0</license>
   <keywords>cordova,device,app groups</keywords>
