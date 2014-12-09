@@ -2,26 +2,26 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
         id="info.protonet.appgroupsuserdefaults" version="0.0.1">
   <name>Share Extension Helper</name>
-  <description></description>
+  <description>This helper makes it possible to share stuff via the iOS share extension</description>
   <author>Joschka Schulz</author>
   <license>Apache 2.0</license>
-  <keywords>cordova,device,app groups</keywords>
-  <repo>https://github.com/protonet/cordova-plugin-nsuserdefaults-for-app-groups</repo>
+  <keywords>cordova,share extension</keywords>
+  <repo>https://github.com/protonet/cordova-plugin-share-extension-helper</repo>
 
-  <js-module src="www/app_groups_user_defaults.js" name="AppGroupsUserDefaults">
-    <clobbers target="AppGroupsUserDefaults" />
+  <js-module src="www/app_groups_user_defaults.js" name="ShareExtensionHelper">
+    <clobbers target="ShareExtensionHelper" />
   </js-module>
 
   <!-- iOS -->
   <platform name="ios">
     <config-file parent="/*" target="config.xml">
-        <feature name="AppGroupsUserDefaults">
-            <param name="ios-package" value="AppGroupsUserDefaults" />
+        <feature name="ShareExtensionHelper">
+            <param name="ios-package" value="ShareExtensionHelper" />
         </feature>
     </config-file>
 
-    <header-file src="src/ios/AppGroupsUserDefaults.h" />
-    <source-file src="src/ios/AppGroupsUserDefaults.m" />
+    <header-file src="src/ios/ShareExtensionHelper.h" />
+    <source-file src="src/ios/ShareExtensionHelper.m" />
 
     <framework src="MobileCoreServices.framework" />
   </platform>
