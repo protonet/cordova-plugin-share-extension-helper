@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
-        id="info.protonet.appgroupsuserdefaults" version="0.0.1">
+        id="info.protonet.shareextensionhelper" version="0.0.1">
   <name>Share Extension Helper</name>
   <description>This helper makes it possible to share stuff via the iOS share extension</description>
   <author>Joschka Schulz</author>
