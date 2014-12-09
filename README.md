@@ -7,7 +7,7 @@ Authors: Joschka Schulz
 
 Use the Cordova CLI and type in the following command:
 
-`cordova plugin add comming-soon`
+`cordova plugin add https://github.com/protonet/cordova-plugin-share-extension-helper.git`
 
 ## Description
 
