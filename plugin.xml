@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        id="info.protonet.appgroupsuserdefaults" version="0.0.1">
+  <name>Share Extension Helper</name>
+  <description>This plugin is used to save and load data to the app groups. It
+  is used to share data between App and Share Extension.</description>
+  <author>Joschka Schulz</author>
+  <license>Apache 2.0</license>
+  <keywords>cordova,device,app groups</keywords>
+  <repo>https://github.com/protonet/cordova-plugin-nsuserdefaults-for-app-groups</repo>
+
+  <js-module src="www/app_groups_user_defaults.js" name="AppGroupsUserDefaults">
+    <clobbers target="AppGroupsUserDefaults" />
+  </js-module>
+
+  <!-- iOS -->
+  <platform name="ios">
+    <config-file parent="/*" target="config.xml">
+        <feature name="AppGroupsUserDefaults">
+            <param name="ios-package" value="AppGroupsUserDefaults" />
+        </feature>
+    </config-file>
+
+    <header-file src="src/ios/AppGroupsUserDefaults.h" />
+    <source-file src="src/ios/AppGroupsUserDefaults.m" />
+
+    <framework src="MobileCoreServices.framework" />
+  </platform>
+</plugin>
