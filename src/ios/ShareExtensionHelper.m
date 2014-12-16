@@ -6,19 +6,26 @@
 @implementation ShareExtensionHelper
 - (void) loadShareImage:(CDVInvokedUrlCommand*)command
 {
-    // do the magic
-    ShareViewController *shareView = self.viewController;
-    NSURL *urlResult = shareView.imageExtensionUrl;
+  // do the magic
+  ShareViewController *shareView = self.viewController;
+  NSURL *urlResult = shareView.imageExtensionUrl;
 
-    // give the callback
-    CDVPluginResult* result = nil;
-    if(urlResult != nil)
-    {
-      result = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:[urlResult absoluteString]];
-    } else {
-      result = [CDVPluginResult resultWithStatus:CDVCommandStatus_IO_EXCEPTION];
-    }
-    [self.commandDelegate sendPluginResult:result callbackId:command.callbackId];
+  // give the callback
+  CDVPluginResult* result = nil;
+  if(urlResult != nil)
+  {
+    result = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:[urlResult absoluteString]];
+  } else {
+    result = [CDVPluginResult resultWithStatus:CDVCommandStatus_IO_EXCEPTION];
+  }
+  [self.commandDelegate sendPluginResult:result callbackId:command.callbackId];
+}
+
+- (void) finishExtension:(CDVInvokedUrlCommand*)command
+{
+  //Do the magic
+  extensionItem.attachments = @[[[NSItemProvider alloc] initWithItem: @{NSExtensionJavaScriptFinalizeArgumentKey: @{@"bgColor":@"red"}} typeIdentifier:(NSString *)kUTTypePropertyList]];
+  [[self extensionContext] completeRequestReturningItems:@[extensionItem] completion:nil];
 }
 
 @end

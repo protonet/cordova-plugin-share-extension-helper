@@ -4,5 +4,9 @@ ShareExtensionHelper.prototype.loadShareImage = function(success, fail) {
   cordova.exec(success, fail, "ShareExtensionHelper", "loadShareImage");
 };
 
+SharedExtensionHelper.prototype.finishExtension = function() {
+  cordova.exec(null, null, "ShareExtensionHelper", finishExtension);
+}
+
 var shareExtensionHelper = new ShareExtensionHelper();
 module.exports = shareExtensionHelper;
