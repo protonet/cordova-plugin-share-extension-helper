@@ -24,8 +24,8 @@
 - (void) finishExtension:(CDVInvokedUrlCommand*)command
 {
   //Do the magic
-  extensionItem.attachments = @[[[NSItemProvider alloc] initWithItem: @{NSExtensionJavaScriptFinalizeArgumentKey: @{@"bgColor":@"red"}} typeIdentifier:(NSString *)kUTTypePropertyList]];
-  [[self extensionContext] completeRequestReturningItems:@[extensionItem] completion:nil];
+  ShareViewController *shareView = self.viewController;
+  [shareView.extensionContext completeRequestReturningItems:nil completionHandler:nil];
 }
 
 @end

@@ -45,3 +45,9 @@ The Plugin is only for iOS.
 ### Load image from ShareViewController
 
     window.ShareExtensionHelper.loadShareImage(success, fail);
+
+### Exit the Share Extension without callback
+
+Please take care that you don't have any observers registered like the splashscreen did.
+
+    window.ShareExtensionHelper.finishExtension();
